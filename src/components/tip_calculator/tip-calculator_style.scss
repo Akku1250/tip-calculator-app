@@ -1,0 +1,22 @@
+.tip-calc-container{
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 10px;
+    margin: 0 auto;
+
+    @media (min-width: 768px) {
+        width: 70vw;
+        flex-direction: row;
+    }
+}
+
+.temp{
+    background-color: rebeccapurple;
+}
+
+.result{
+    background-color: hsl(183, 100%, 15%);
+
+}

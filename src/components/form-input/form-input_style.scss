@@ -1,0 +1,74 @@
+.input-group{
+
+  .label-container{
+       margin: 8px 0;
+
+    .form-input-label{
+       font-weight: 700;
+       color: hsl(186, 14%, 43%);
+    }
+  }
+  
+  .input-container{
+    position: relative;
+
+    .form-input {
+        display: block;
+        width: 90%;
+        font-size: 18px;
+        color: hsl(183, 100%, 15%);
+        font-weight: 700;
+        padding: 10px 15px 10px 5px;
+        border-radius: 8px;
+        border: none;
+        background-color: hsl(189, 41%, 97%);
+        text-align: right;
+
+        &:focus {
+        outline: none;
+        }
+
+        &[type=number]::-webkit-outer-spin-button,
+        &[type=number]::-webkit-inner-spin-button{
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        &[type=number]{
+            -moz-appearance: textfield;
+        }
+
+        &::placeholder{
+            color: hsl(183, 100%, 15%);
+        }
+
+        &::-webkit-input-placeholder { 
+            color: hsl(183, 100%, 15%);
+        }
+    }
+
+    .form-input-icon{
+        position: absolute;
+        top: 12px;
+        left: 16px;
+    }
+
+    .add-spacing{
+        padding-left: 30px;
+        width: 85%;
+    }
+  }
+
+  
+}
+
+
+// .form-input[type=number]::-webkit-outer-spin-button,
+// .form-input[type=number]::-webkit-inner-spin-button {
+//   -webkit-appearance: none;
+//   margin: 0;
+// }
+
+// .form-input[type=number] {
+//   -moz-appearance: textfield;
+// }
