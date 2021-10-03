@@ -1,7 +1,7 @@
 .input-group{
 
   .label-container{
-       margin: 8px 0;
+    margin: 0.5rem 0;
 
     .form-input-label{
        font-weight: 700;
@@ -15,17 +15,18 @@
     .form-input {
         display: block;
         width: 90%;
-        font-size: 18px;
+        font-size: 1.125rem;
         color: hsl(183, 100%, 15%);
         font-weight: 700;
-        padding: 10px 15px 10px 5px;
+        padding: 0.625rem 0.9375rem 0.625rem 0.3125rem;
         border-radius: 8px;
         border: none;
         background-color: hsl(189, 41%, 97%);
         text-align: right;
+        font-family: 'Space Mono', monospace;
 
         &:focus {
-        outline: none;
+            outline: none;
         }
 
         &[type=number]::-webkit-outer-spin-button,
@@ -61,14 +62,3 @@
 
   
 }
-
-
-// .form-input[type=number]::-webkit-outer-spin-button,
-// .form-input[type=number]::-webkit-inner-spin-button {
-//   -webkit-appearance: none;
-//   margin: 0;
-// }
-
-// .form-input[type=number] {
-//   -moz-appearance: textfield;
-// }

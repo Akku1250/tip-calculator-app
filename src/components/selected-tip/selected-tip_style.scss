@@ -1,0 +1,59 @@
+.select-tip{
+    padding: 0.625rem 0;
+
+    .label-container{
+       margin: 0.5rem 0;
+
+        .form-input-label{
+            font-weight: 700;
+            color: hsl(186, 14%, 43%);
+        }
+    }
+
+    .d-flex{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+
+        .custom-button{
+            min-width: 45%;
+
+            @media (min-width: 1024px){
+                min-width: 31%;
+            }
+        }
+
+        .custom-input{
+            width: 27vw !important;
+
+           @media (min-width: 411px) {
+             width: 29vw !important;
+           }
+
+           @media (min-width: 768px) {
+             width: 10vw !important;
+           }
+
+           @media (min-width: 1024px) {
+             width: 9.5vw !important;
+           }
+
+           @media (min-width: 1280px) {
+             width: 4.8vw !important;
+           }
+
+           @media (min-width: 1366px) {
+             width: 5vw !important;
+           }
+        }
+    }
+}
+
+.input-active{
+    border: 2px solid hsl(183, 100%, 15%) !important;
+}
+
+.button-active{
+     background-color: hsl(172, 67%, 45%) !important;
+     color: hsl(183, 100%, 15%) !important;
+}

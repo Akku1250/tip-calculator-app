@@ -2,7 +2,7 @@ import React from 'react';
 
 import './form-input_style.scss';
 
-const FormInput = ({handleChange, label, imageURL,alt,...otherProps}) => (
+const FormInput = ({handleChange, label, imageURL,alt, addClass,...otherProps}) => (
     <div className="input-group">
         {
             label ?
@@ -20,7 +20,7 @@ const FormInput = ({handleChange, label, imageURL,alt,...otherProps}) => (
                 : null
             }
             <input 
-                className={`form-input ${imageURL? 'add-spacing': ''}`} 
+                className={`form-input ${imageURL? 'add-spacing': ''} ${addClass? addClass : ''}`} 
                 onChange={handleChange} 
                 {...otherProps}/>   
         </div>

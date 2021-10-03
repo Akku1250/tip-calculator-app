@@ -1,22 +1,47 @@
 .tip-calc-container{
     display: flex;
     flex-direction: column;
-    padding: 15px;
+    padding: 30px;
     background-color: hsl(0, 0%, 100%);
-    border-radius: 10px;
+    border-radius: 20px;
     margin: 0 auto;
 
     @media (min-width: 768px) {
         width: 70vw;
         flex-direction: row;
     }
-}
 
-.temp{
-    background-color: rebeccapurple;
+    @media (min-width: 1024px) {
+        width: 85vw;
+    }
+
+    @media (min-width: 1280px) {
+        width: 50vw;
+    }
+
+    @media (min-width: 1366px) {
+        width: 45vw;
+    }
 }
 
 .result{
     background-color: hsl(183, 100%, 15%);
+    padding: 30px;
+    position: relative;
 
+    .reset-button{
+        background-color: hsl(172, 67%, 45%) !important;
+        color: hsl(183, 100%, 15%);
+        width: 100%;
+        margin-top: 32px;
+
+        @media (min-width: 768px) {
+            position: absolute;
+            width: 87%;
+            bottom: 24px;
+            left: 30px;
+        }
+    }
 }
+
+
