@@ -159,12 +159,14 @@ class TipCalculator extends React.Component{
                 </Section>
                 <Section addClass="result">
                     <Receipt 
-                        title="Tip Amount" 
-                        tipAmount={this.state.tipAmount}
+                        title="Tip"
+                        subText="Total" 
+                        amount={this.state.tipAmount}
                     />
                     <Receipt 
-                        title="Total" 
-                        tipAmount={this.state.total}
+                        title="Total"
+                        subText="/ person" 
+                        amount={this.state.total}
                     />
                     <CustomButton  
                         onClick={this.handleReset}

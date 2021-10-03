@@ -2,16 +2,16 @@ import React from "react";
 import './receipt_style.scss';
 
 
-const Receipt = ({title, tipAmount}) => (
+const Receipt = ({title,subText,amount}) => (
     <div className="receipt">
         <div className="receipt-text">
             <p className="receipt-title">
                 {title}
             </p>
-            <span>/ person</span>
+            <span>{subText}</span>
         </div>
         <div className="receipt-amount">
-            <p>${tipAmount}</p>
+            <p>${amount}</p>
         </div>
     </div>
 )
