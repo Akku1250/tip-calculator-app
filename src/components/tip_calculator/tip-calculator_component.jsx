@@ -35,13 +35,7 @@ class TipCalculator extends React.Component{
 
     handleInputChange = (target) => {
         const {value, name} = target;
-
         this.setState({ [name]: value })
-
-        if(name === 'numberOfPpl' && value === "0"){
-            this.setState({ [name]: 1 })
-        }
-        
     }
 
     updateReceipt = () =>{
@@ -49,7 +43,7 @@ class TipCalculator extends React.Component{
             this.setState((state) => {
                let bill = parseFloat(state.bill);
                let selectedTip = parseFloat(state.selectedTip);
-               let numberOfPpl = parseFloat(state.numberOfPpl);
+               let numberOfPpl = parseInt(state.numberOfPpl);
                let total = 0;
                let tipAmount = 0;
 
@@ -94,20 +88,64 @@ class TipCalculator extends React.Component{
     }
 
     handleBill = (e) =>{
+        if(parseFloat(e.target.value) > 11000 || parseFloat(e.target.value) === 0){
+            
+            if(this.state.bill){
+                e.target.value = this.state.bill;
+            }else{
+                 e.target.value = '';
+            }
+        }
+
+        if(!Number.isInteger(Number(e.target.value))){
+
+            e.target.value = parseFloat(parseFloat(e.target.value).toFixed(2));
+        }
+
         this.handleInputChange(e.target);
         this.updateReceipt();
     }
 
     handleNumberOfPpl = (e) =>{
+        if(parseInt(e.target.value) > 20 || parseInt(e.target.value) === 0){
+
+            if(this.state.numberOfPpl){
+                e.target.value = this.state.numberOfPpl;  
+
+            }else{
+                 e.target.value = 1;
+            }
+        }
+
+        if(!Number.isInteger(Number(e.target.value))){
+
+            e.target.value = parseInt(e.target.value);
+        }
+
         this.handleInputChange(e.target);
         this.updateReceipt();
     }
 
     handleCustomTip = (e) => {
-         this.handleInputChange(e.target);
-         this.changeTipSelection(e.target);
-         this.updateSelectedTip(e.target);
-         this.updateReceipt();
+        if(parseFloat(e.target.value) > 101 || parseFloat(e.target.value) === 0){
+            e.target.value = '';
+        }
+
+        if(!Number.isInteger(Number(e.target.value))){
+
+            if(parseInt(e.target.value) === 100){
+                 e.target.value = 100;
+
+            }else{
+                 e.target.value = parseFloat(parseFloat(e.target.value).toFixed(2));
+            }
+           
+        }
+
+        this.handleInputChange(e.target);
+        this.changeTipSelection(e.target);
+        this.updateSelectedTip(e.target);
+        this.updateReceipt();
     }
 
     handleTipSelection = (e) => {
@@ -123,7 +161,6 @@ class TipCalculator extends React.Component{
 
     render(){
         const tips  = [...this.state.tips];
-
         return(
             <div className='tip-calc-container'>
                 <Section>
