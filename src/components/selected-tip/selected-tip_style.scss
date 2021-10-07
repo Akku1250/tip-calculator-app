@@ -10,43 +10,113 @@
         }
     }
 
-    .d-flex{
-        display: flex;
-        flex-wrap: wrap;
-        gap: 8px;
+    .d-grid{
+      display: grid;
+      grid-template-columns: repeat(2, 98px);
+      grid-template-rows: repeat(3, 48px);
+      grid-column-gap: 8px;
+      grid-row-gap: 10px;
 
-        .custom-button{
-            min-width: 45%;
+      @media (min-width: 320px) {
+         grid-template-columns: repeat(2, 117px);
+      }
 
-            @media (min-width: 1024px){
-                min-width: 31%;
-            }
-        }
+      @media (min-width: 360px) {
+          grid-template-columns: repeat(2, 138px);
+      }
+      @media (min-width: 411px) {
+          grid-template-columns: repeat(2, 155px); 
+      }
 
-        .custom-input{
-            width: 27vw !important;
+      @media (min-width: 540px) {
+         grid-template-columns: repeat(3, 137px);
+         grid-template-rows: repeat(2, 48px);  
+      }
 
-           @media (min-width: 411px) {
-             width: 29vw !important;
-           }
+      @media (min-width: 768px) {
+          grid-template-columns: repeat(2, 107px); 
+          grid-template-rows: repeat(3, 48px);
+      }
 
-           @media (min-width: 768px) {
-             width: 10vw !important;
-           }
+      @media (min-width: 1024px) {
+          grid-template-columns: repeat(3, 119px);
+          grid-template-rows: repeat(2, 48px); 
+      }
 
-           @media (min-width: 1024px) {
-             width: 9.5vw !important;
-           }
+      @media (min-width: 1280px) {
+          grid-template-columns: repeat(3, 95px);
+      }
+      
+      @media (min-width: 1400px) {
+          grid-template-columns: repeat(3, 103px);
+      }
 
-           @media (min-width: 1280px) {
-             width: 4.8vw !important;
-           }
+      @media (min-width: 1700px) {
+          grid-template-columns: repeat(3, 119px);
+      }
 
-           @media (min-width: 1366px) {
-             width: 5vw !important;
-           }
-        }
+      .custom-input{
+         width: 76% !important;
+
+          @media (min-width: 320px) {
+            width: 80% !important;
+          }
+
+          @media (min-width: 360px) {
+            width: 83% !important;
+          }
+
+          @media (min-width: 768px) {
+            width: 79% !important;
+          }
+
+          @media (min-width: 1280px) {
+            width: 75% !important;
+          }
+
+          @media (min-width: 1700px) {
+            width: 81% !important;
+          }
+      }
     }
+
+    // .d-flex{
+    //     display: flex;
+    //     flex-wrap: wrap;
+    //     gap: 8px;
+
+    //     .custom-button{
+    //         min-width: 45%;
+
+    //         @media (min-width: 1024px){
+    //             min-width: 31%;
+    //         }
+    //     }
+
+    //     .custom-input{
+    //         width: 27vw !important;
+
+    //        @media (min-width: 411px) {
+    //          width: 29vw !important;
+    //        }
+
+    //        @media (min-width: 768px) {
+    //          width: 10vw !important;
+    //        }
+
+    //        @media (min-width: 1024px) {
+    //          width: 9.5vw !important;
+    //        }
+
+    //        @media (min-width: 1280px) {
+    //          width: 4.8vw !important;
+    //        }
+
+    //        @media (min-width: 1366px) {
+    //          width: 5vw !important;
+    //        }
+    //     }
+    // }
 }
 
 .input-active{

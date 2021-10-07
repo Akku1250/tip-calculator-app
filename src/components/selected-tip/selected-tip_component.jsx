@@ -10,7 +10,7 @@ const SeletedTip = ({label, tips, handleTipSelection, handleCustomTip, customTip
                 {label}
             </label>
         </div>
-        <div className="d-flex">
+        <div className="d-grid">
             {tips.map((tip) => (
                 tip.type === 'button' 
                     ? (<CustomButton key={tip.id} 

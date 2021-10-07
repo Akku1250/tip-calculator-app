@@ -33,13 +33,14 @@
         background-color: hsl(172, 67%, 45%) !important;
         color: hsl(183, 100%, 15%);
         width: 100%;
-        margin-top: 32px;
+        margin-top: 2rem;
 
         @media (min-width: 768px) {
-            position: absolute;
-            width: 87%;
-            bottom: 24px;
-            left: 30px;
+            margin-top: 12rem;
+        }
+
+        @media (min-width: 1024px) {
+            margin-top: 8rem;
         }
     }
 }
