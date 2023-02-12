@@ -14,14 +14,14 @@ const Receipt = ({ title, subText, amount }: IProps) => (
   >
     <Grid
       item
-      xs={6}
+      xs={4}
     >
       <Typography sx={{ color: 'hsl(0, 0%, 100%)', fontSize: { xs: 16, lg: 18 }, fontWeight: 700 }}>{title}</Typography>
       <Typography sx={{ color: 'hsl(185, 41%, 84%)', fontSize: 'small', fontWeight: 700 }}>{subText}</Typography>
     </Grid>
     <Grid
       item
-      xs={6}
+      xs={8}
     >
       <Typography
         sx={{ color: 'hsl(172, 67%, 45%)', fontSize: { xs: 36, sm: 38, lg: 42 }, textAlign: 'end', fontWeight: 700 }}

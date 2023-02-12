@@ -53,7 +53,7 @@ function Cost({ bill, numberOfPpl, customTip, selectedTip, reset }: IProps) {
         pt={{ xs: 2 }}
         position={{ lg: 'absolute' }}
         bottom={{ lg: 30 }}
-        sx={{ width: { lg: 450 } }}
+        sx={{ width: { lg: 454 } }}
       >
         <Button
           sx={({ palette }) => ({
