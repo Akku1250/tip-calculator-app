@@ -33,7 +33,7 @@ function Cost({ bill, numberOfPpl, customTip, selectedTip, reset }: IProps) {
     <Grid
       item
       xs={6}
-      sx={({ palette }) => ({ backgroundColor: palette.primary.main, p: 2, borderRadius: 3 })}
+      sx={({ palette }) => ({ backgroundColor: palette.primary.main, p: 3, borderRadius: 3 })}
       position={'relative'}
     >
       <Receipt
@@ -53,7 +53,7 @@ function Cost({ bill, numberOfPpl, customTip, selectedTip, reset }: IProps) {
         pt={{ xs: 2 }}
         position={{ lg: 'absolute' }}
         bottom={{ lg: 30 }}
-        sx={{ width: { lg: 470 } }}
+        sx={{ width: { lg: 450 } }}
       >
         <Button
           sx={({ palette }) => ({

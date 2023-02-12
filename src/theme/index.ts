@@ -12,6 +12,9 @@ export const theme = createTheme({
       default: 'hsl(185, 41%, 84%)',
     },
   },
+  typography:{
+    fontFamily: `'Space Mono', monospace`
+  },
   components: {
     MuiButton: MuiButton,
     MuiTextField: MuiTextFields,

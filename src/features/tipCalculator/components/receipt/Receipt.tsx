@@ -16,9 +16,7 @@ const Receipt = ({ title, subText, amount }: IProps) => (
       item
       xs={6}
     >
-      <Typography sx={{ color: 'hsl(0, 0%, 100%)', fontSize: { xs: 26, sm: 28, lg: 32 }, fontWeight: 700 }}>
-        {title}
-      </Typography>
+      <Typography sx={{ color: 'hsl(0, 0%, 100%)', fontSize: { xs: 16, lg: 18 }, fontWeight: 700 }}>{title}</Typography>
       <Typography sx={{ color: 'hsl(185, 41%, 84%)', fontSize: 'small', fontWeight: 700 }}>{subText}</Typography>
     </Grid>
     <Grid
@@ -26,7 +24,7 @@ const Receipt = ({ title, subText, amount }: IProps) => (
       xs={6}
     >
       <Typography
-        sx={{ color: 'hsl(172, 67%, 45%)', fontSize: { xs: 26, sm: 28, lg: 32 }, textAlign: 'end', fontWeight: 700 }}
+        sx={{ color: 'hsl(172, 67%, 45%)', fontSize: { xs: 36, sm: 38, lg: 42 }, textAlign: 'end', fontWeight: 700 }}
       >
         ${amount}
       </Typography>

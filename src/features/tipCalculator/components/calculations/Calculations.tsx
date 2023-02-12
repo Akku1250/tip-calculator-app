@@ -63,6 +63,7 @@ function Calculations({
                     width: '-webkit-fill-available',
                     background: tip.id === activeTip ? palette.primary.light : palette.primary.main,
                     color: tip.id === activeTip ? palette.primary.main : 'white',
+                    fontWeight: 700,
                     ':hover': {
                       bgcolor: palette.primary.light,
                       color: palette.primary.main,
