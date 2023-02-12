@@ -1,4 +1,4 @@
-import { TextField } from '@mui/material';
+import { SxProps, TextField, Theme } from '@mui/material';
 import makeStyles from '@mui/styles/makeStyles';
 import React, { useEffect, useState } from 'react';
 
@@ -19,13 +19,14 @@ const useStyles = makeStyles({
 });
 
 interface IProps {
+  sx?: SxProps<Theme>;
   placeholder?: string;
   icon?: React.ReactNode;
   defaultValue: string;
   onChange: (input: string) => void;
 }
 
-function TextfieldExtended({ placeholder, icon, defaultValue, onChange }: IProps) {
+function TextfieldExtended({ sx, placeholder, icon, defaultValue, onChange }: IProps) {
   const classes = useStyles();
   const [value, setValue] = useState(defaultValue);
 
@@ -42,6 +43,7 @@ function TextfieldExtended({ placeholder, icon, defaultValue, onChange }: IProps
   return (
     <TextField
       className={classes.input}
+      sx={sx}
       value={value}
       placeholder={placeholder}
       type={'number'}

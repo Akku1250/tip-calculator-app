@@ -12,8 +12,6 @@ type IState = {
   tips: ITips[];
   selectedTip: string;
   customTip: string;
-  tipAmount: string;
-  total: string;
 };
 
 interface IProps {}

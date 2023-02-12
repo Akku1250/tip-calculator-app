@@ -82,6 +82,11 @@ function Calculations({
             xs={6}
           >
             <TextfieldExtended
+              sx={({ palette }) => ({
+                border: activeTip === 6 ? `2px solid ${palette.primary.light}` : '',
+                borderRadius: activeTip === 6 ? 2 : undefined,
+                height: activeTip === 6 ? 62 : undefined,
+              })}
               placeholder={'Custom'}
               defaultValue={customTip || ''}
               onChange={(input) => setCustomTip(input, 6)}

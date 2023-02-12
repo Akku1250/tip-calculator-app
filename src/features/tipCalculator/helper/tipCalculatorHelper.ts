@@ -1,17 +1,4 @@
-import { ITips } from '../interfaces/ITips';
-
-export interface SplitterState {
-  bill: string;
-  numberOfPpl: string;
-  activeTip: number;
-  tips: ITips[];
-  selectedTip: string;
-  customTip: string;
-  tipAmount: string;
-  total: string;
-}
-
-export const baseState: SplitterState = {
+export const baseState = {
   bill: '',
   numberOfPpl: '',
   activeTip: -1,
@@ -24,6 +11,4 @@ export const baseState: SplitterState = {
   ],
   selectedTip: '',
   customTip: '',
-  tipAmount: (0.0).toFixed(2),
-  total: (0.0).toFixed(2),
 };
