@@ -1,0 +1,24 @@
+
+# Ignore artifacts:
+build
+coverage
+
+# Lock Files
+.lock
+
+# Markdown Files
+.md
+
+# Images
+*.png
+*.jpeg
+*.jpg
+
+
+**/.git
+**/.svn
+**/.hg
+**/node_modules
+*.gitignore
+*.txt
+.log
