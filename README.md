@@ -1,4 +1,4 @@
-# Preview Website
+# Demo
 
 https://akku1250.github.io/tip-calculator-app/
 
