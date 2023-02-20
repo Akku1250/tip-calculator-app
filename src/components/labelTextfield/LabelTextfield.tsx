@@ -7,10 +7,12 @@ interface IProps {
   placeholder: string;
   icon?: React.ReactNode;
   value?: string;
+  error?: boolean;
+  helperText?: string;
   onChange: (input: string) => void;
 }
 
-function LabelTextfield({ label, placeholder, value, icon, onChange }: IProps) {
+function LabelTextfield({ label, placeholder, value, error, helperText, icon, onChange }: IProps) {
   return (
     <Stack>
       <Typography
@@ -20,6 +22,8 @@ function LabelTextfield({ label, placeholder, value, icon, onChange }: IProps) {
         {label}
       </Typography>
       <TextfieldExtended
+        error={error}
+        helperText={helperText}
         defaultValue={value || ''}
         placeholder={placeholder}
         icon={icon}

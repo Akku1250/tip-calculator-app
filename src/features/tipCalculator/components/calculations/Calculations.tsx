@@ -12,6 +12,8 @@ interface IProps {
   customTip: string;
   tips: ITips[];
   activeTip: number;
+  errorBill: boolean;
+  errorNumberOfPpl: boolean;
   setBill: (input: string) => void;
   setNumberOfPpl: (input: string) => void;
   setCustomTip: (input: string, id: number) => void;
@@ -24,6 +26,8 @@ function Calculations({
   tips,
   customTip,
   activeTip,
+  errorBill,
+  errorNumberOfPpl,
   setBill,
   setNumberOfPpl,
   setCustomTip,
@@ -38,6 +42,8 @@ function Calculations({
       <LabelTextfield
         label="Bill"
         value={bill}
+        error={errorBill}
+        helperText={errorBill ? 'Bill should be less than $11000' : ''}
         placeholder="0"
         icon={<AttachMoneyIcon sx={{ color: 'hsl(189, 30%, 67%)' }} />}
         onChange={setBill}
@@ -96,6 +102,8 @@ function Calculations({
         </>
       </Grid>
       <LabelTextfield
+        error={errorNumberOfPpl}
+        helperText={errorNumberOfPpl ? 'Number of People should be less than 20' : ''}
         label="Number of People"
         value={numberOfPpl}
         placeholder="0"

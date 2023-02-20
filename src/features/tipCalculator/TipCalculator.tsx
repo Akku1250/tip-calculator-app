@@ -12,6 +12,8 @@ type IState = {
   tips: ITips[];
   selectedTip: string;
   customTip: string;
+  errorBill: boolean;
+  errorNumberOfPpl: boolean;
 };
 
 interface IProps {}
@@ -23,7 +25,7 @@ class TipCalculator extends React.Component<IProps, IState> {
   }
 
   render() {
-    const { bill, numberOfPpl, activeTip, customTip, tips, selectedTip } = this.state;
+    const { bill, numberOfPpl, activeTip, customTip, tips, selectedTip, errorBill, errorNumberOfPpl } = this.state;
     return (
       <Grid
         component={Paper}
@@ -43,6 +45,8 @@ class TipCalculator extends React.Component<IProps, IState> {
           tips={tips}
           customTip={customTip}
           activeTip={activeTip}
+          errorBill={errorBill}
+          errorNumberOfPpl={errorNumberOfPpl}
           setBill={this.handleBill}
           setNumberOfPpl={this.handleNumberOfPpl}
           setCustomTip={this.handleCustomTip}
@@ -64,33 +68,37 @@ class TipCalculator extends React.Component<IProps, IState> {
   };
 
   private handleBill = (input: string) => {
-    let { bill } = this.state;
+    let { bill, errorBill } = this.state;
 
-    if (parseFloat(input) > 11000 || parseFloat(input) <= 0) {
+    if (parseFloat(input) > 11000) {
       bill = '';
+      errorBill = true;
     } else {
       bill = input;
+      errorBill = false;
     }
 
-    this.setState((prevState) => ({ ...prevState, bill }));
+    this.setState((prevState) => ({ ...prevState, bill, errorBill }));
   };
 
   private handleNumberOfPpl = (input: string) => {
-    let { numberOfPpl } = this.state;
+    let { numberOfPpl, errorNumberOfPpl } = this.state;
 
-    if (parseInt(input) > 20 || parseInt(input) <= 0) {
+    if (parseInt(input) >= 20) {
       numberOfPpl = '';
+      errorNumberOfPpl = true;
     } else {
       numberOfPpl = input;
+      errorNumberOfPpl = false;
     }
 
-    this.setState((prevState) => ({ ...prevState, numberOfPpl }));
+    this.setState((prevState) => ({ ...prevState, numberOfPpl, errorNumberOfPpl }));
   };
 
   private handleCustomTip = (input: string, activeTip: number) => {
     let { customTip } = this.state;
 
-    if (parseFloat(input) > 101 || parseFloat(input) <= 0) {
+    if (parseFloat(input) > 101) {
       customTip = '';
     } else {
       customTip = input;
@@ -100,7 +108,13 @@ class TipCalculator extends React.Component<IProps, IState> {
   };
 
   private handleSelectedTip = (input: string, activeTip: number) => {
-    this.setState((prevState) => ({ ...prevState, selectedTip: input, customTip: '', activeTip }));
+    this.setState((prevState) => ({
+      ...prevState,
+      selectedTip: input,
+      customTip: '',
+      activeTip,
+      errorCustomTip: false,
+    }));
   };
 }
 

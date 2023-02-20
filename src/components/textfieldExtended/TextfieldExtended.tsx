@@ -23,10 +23,12 @@ interface IProps {
   placeholder?: string;
   icon?: React.ReactNode;
   defaultValue: string;
+  error?: boolean;
+  helperText?: string;
   onChange: (input: string) => void;
 }
 
-function TextfieldExtended({ sx, placeholder, icon, defaultValue, onChange }: IProps) {
+function TextfieldExtended({ sx, placeholder, icon, defaultValue, error, helperText, onChange }: IProps) {
   const classes = useStyles();
   const [value, setValue] = useState(defaultValue);
 
@@ -36,13 +38,15 @@ function TextfieldExtended({ sx, placeholder, icon, defaultValue, onChange }: IP
 
   const handleTextFieldOnChange = (e: React.ChangeEvent<HTMLTextAreaElement | HTMLInputElement>) => {
     const value = e.target.value;
-    onChange(value);
-    setValue(value);
+    onChange(parseInt(value) <= 0 ? '' : value);
+    setValue(parseInt(value) <= 0 ? '' : value);
   };
 
   return (
     <TextField
       className={classes.input}
+      error={error}
+      helperText={helperText}
       sx={sx}
       value={value}
       placeholder={placeholder}

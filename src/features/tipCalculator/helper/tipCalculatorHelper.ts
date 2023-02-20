@@ -11,4 +11,6 @@ export const baseState = {
   ],
   selectedTip: '',
   customTip: '',
+  errorBill: false,
+  errorNumberOfPpl: false,
 };

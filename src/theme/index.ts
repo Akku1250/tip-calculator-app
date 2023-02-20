@@ -1,5 +1,5 @@
 import { createTheme } from '@mui/material';
-import { MuiButton, MuiTextFields } from './components';
+import { MuiButton, MuiFormHelperText, MuiTextFields } from './components';
 
 export const theme = createTheme({
   palette: {
@@ -18,5 +18,6 @@ export const theme = createTheme({
   components: {
     MuiButton: MuiButton,
     MuiTextField: MuiTextFields,
+    MuiFormHelperText: MuiFormHelperText,
   },
 });
