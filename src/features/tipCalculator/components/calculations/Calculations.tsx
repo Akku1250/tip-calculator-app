@@ -77,7 +77,7 @@ function Calculations({
               >
                 <Button
                   sx={({ palette }) => ({
-                    width: '-webkit-fill-available',
+                    width: '100%',
                     background: tip.id === activeTip ? palette.primary.light : palette.primary.main,
                     color: tip.id === activeTip ? palette.primary.main : 'white',
                     fontWeight: 700,
