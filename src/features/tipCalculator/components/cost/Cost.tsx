@@ -66,6 +66,7 @@ function Cost({ bill, numberOfPpl, customTip, selectedTip, reset }: IProps) {
               color: palette.primary.main,
             },
           })}
+          disabled={tipAmount === 0.0 && total === 0.0}
           onClick={() => reset()}
         >
           RESET
