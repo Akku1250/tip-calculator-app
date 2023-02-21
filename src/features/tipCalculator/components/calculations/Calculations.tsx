@@ -1,4 +1,4 @@
-import { Button, Grid } from '@mui/material';
+import { Button, Grid, Typography } from '@mui/material';
 import React from 'react';
 import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
 import PersonIcon from '@mui/icons-material/Person';
@@ -55,6 +55,17 @@ function Calculations({
         mt={3}
       >
         <>
+          <Grid
+            item
+            container
+          >
+            <Typography
+              fontWeight={'bold'}
+              sx={{ color: 'hsl(186, 14%, 43%)', mb: 0.5 }}
+            >
+              {'Select Tip %'}
+            </Typography>
+          </Grid>
           {tips.map((tip) => {
             return (
               <Grid
