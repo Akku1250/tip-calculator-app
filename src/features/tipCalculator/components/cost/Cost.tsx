@@ -57,7 +57,7 @@ function Cost({ bill, numberOfPpl, customTip, selectedTip, reset }: IProps) {
       >
         <Button
           sx={({ palette }) => ({
-            width: '-webkit-fill-available',
+            width: '100%',
             fontWeight: 700,
             background: palette.primary.light,
             color: palette.primary.main,

@@ -8,7 +8,7 @@ export const MuiButton: Components<Theme>['MuiButton'] = {
   styleOverrides: {
     root: {
       height: 60,
-      fontSize: 21,
+      fontSize: 25,
     },
   },
 };

@@ -88,7 +88,7 @@ function Calculations({
                   })}
                   onClick={() => setSelectedTip(tip.value, tip.id)}
                 >
-                  {tip.label}
+                  {`${tip.label}%`}
                 </Button>
               </Grid>
             );
